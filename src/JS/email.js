@@ -7,23 +7,8 @@ $(() => {
     window.location.href = "page.html";
    return;
    }
-  //HAHA
-  if (
-    !localStorage.getItem("setEmail") ||
-    localStorage.getItem("setEmail") == null
-  ) {
-    if (localStorage.getItem("isLoggedIn")) {
-      window.location.href = "dashboard.html";
-    } else {
-      window.location.href = "index.html";
-    }
-    window.location.href = "index.html";
-    return;
-  }
-  if (!localStorage.getItem("isLoggedIn")) {
-    window.location.href = "index.html";
-    return;
-  }
+ 
+  
   $("#addEmailfrm").submit(function (e) {
     e.preventDefault();
     var formData = new FormData(this);
