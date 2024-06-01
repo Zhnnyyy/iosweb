@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Email</title>
+    <link rel="stylesheet" href="src/STYLE/email.css" />
+    <link rel="stylesheet" href="src/STYLE/sweetalert2.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <center><h2>Add Email</h2></center>
+      <form id="addEmailfrm">
+        <div class="inputs">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="off"
+            required
+          />
+          <button id="sendOTP">Send</button>
+        </div>
+        <div class="inputs">
+          <input
+            type="number"
+            name="otp"
+            id="otp"
+            placeholder="Verification code"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <span>Change Password</span>
+        <div class="inputs">
+          <input
+            type="password"
+            name="pass1"
+            id="pass1"
+            autocomplete="off"
+            placeholder="New Password"
+            required
+          />
+        </div>
+        <div class="inputs">
+          <input
+            type="password"
+            name="pass2"
+            autocomplete="off"
+            id="pass2"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <div class="inputs">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="src/JS/sweetalert2.min.js"></script>
+    <script src="src/JS/email.js" type="module"></script>
+  </body>
+</html>

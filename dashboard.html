@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="src/STYLE/dashboard.css" />
+    <link rel="stylesheet" href="src/STYLE/sweetalert2.min.css" />
+  </head>
+  <body>
+    <div class="bottom-tab">
+      <div class="attendancetab nav-btn" data-id="attendance">
+        <img src="src/icons/attendance.png" alt="" />
+      </div>
+      <div class="payrolltab nav-btn" data-id="payroll">
+        <img src="src/icons/payroll.png" alt="" />
+      </div>
+      <div class="qrcodetab nav-btn" data-id="qrcode">
+        <img src="src/icons/qrcode.png" alt="" />
+      </div>
+      <div class="requesthistorytab nav-btn" data-id="request-history">
+        <img src="src/icons/request-history.png" alt="" />
+      </div>
+      <div class="requesttab nav-btn" data-id="request">
+        <img src="src/icons/request.png" alt="" />
+      </div>
+    </div>
+    <div class="container">
+      <div class="qrcode content">
+        <div class="header">
+          <h2>QR Code</h2>
+          <img src="src/icons/signout.png" alt="" id="signoutBtn" />
+        </div>
+        <div class="body-content">
+          <div class="body-container">
+            <div id="qrbox"></div>
+          </div>
+        </div>
+      </div>
+      <div class="request content">
+        <div class="header">
+          <h2>Request</h2>
+        </div>
+        <div class="body-content">
+          <form id="sendRequest">
+            <div class="inputs">
+              <label for="startdate">Start Date</label>
+              <input type="date" name="startdate" id="startdate" required />
+            </div>
+            <div class="inputs">
+              <label for="enddate">End Date</label>
+              <input
+                type="date"
+                name="enddate"
+                id="enddate"
+                value=""
+                required
+              />
+            </div>
+            <div class="inputs">
+              <select name="leavetype" id="leavetype" required></select>
+            </div>
+            <div class="inputs">
+              <textarea
+                name="reason"
+                id="reason"
+                placeholder="Reason..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button id="submitrequest">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="request-history content">
+        <div class="header">
+          <h2>Request History</h2>
+        </div>
+        <div class="body-content">
+          <!-- <div class="requestbox">
+            <div class="rbox1">
+              <h5>Status: <span class="mvalue"></span></h5>
+              <h5>Date: <span class="mvalue"></span></h5>
+            </div>
+            <div class="rbox2">
+              <h5>Type: <span class="mvalue"></span></h5>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="attendance content">
+        <div class="header">
+          <h2>Attendance</h2>
+        </div>
+        <div class="body-content">
+          <!-- <div class="attendancebox">
+            <center><span>2024-01-05</span></center>
+            <div class="time">
+              <h5>Time In</h5>
+              <h5>22033</h5>
+            </div>
+            <div class="time">
+              <h5>Time Out</h5>
+              <h5>22033</h5>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="payroll content">
+        <div class="header">
+          <h2>Payroll</h2>
+        </div>
+        <div class="body-content">
+          <!-- <details>
+            <summary>
+              <div class="msummary">
+                <div class="sum1"><span>hehe</span> <span>HAHA</span></div>
+              </div>
+            </summary>
+            <div class="payrolldetails">
+              <div class="b1">
+                <div class="left">
+                  <div class="detailsbox">
+                    <h5>Payment Date</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>Employee ID</h5>
+                    <span>VAL001</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>Employee Name</h5>
+                    <span>Sophia Elizabeth</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="detailsbox">
+                    <h5>Payroll Period</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="b1">
+                <div class="left">
+                  <div class="detailsbox">
+                    <h5>Rate</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>WorkDays</h5>
+                    <span>VAL001</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="detailsbox">
+                    <h5>Leave</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>Undertime</h5>
+                    <span>Sophia Elizabeth</span>
+                  </div>
+                </div>
+              </div>
+              <div class="subtotal">
+                <h4>Basic Pay: <span>HEHEH</span></h4>
+              </div>
+              <hr />
+              <div class="b1">
+                <div class="left">
+                  <div class="detailsbox">
+                    <h5>Overtime Hours</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="detailsbox">
+                    <h5>Rate per hour</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                </div>
+              </div>
+              <div class="subtotal">
+                <h4>Overtime: <span>HEHEH</span></h4>
+              </div>
+              <hr />
+              <div class="b1">
+                <div class="left">
+                  <div class="detailsbox">
+                    <h5>Regular Holiday</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>Special Holiday</h5>
+                    <span>VAL001</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="detailsbox">
+                    <h5>Regular Holiday Pay</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>Special Holiday Pay</h5>
+                    <span>Sophia Elizabeth</span>
+                  </div>
+                </div>
+              </div>
+              <div class="subtotal">
+                <h4>Holiday Pay: <span>HEHEH</span></h4>
+              </div>
+              <hr />
+              <div class="b1">
+                <div class="left">
+                  <div class="detailsbox">
+                    <h5>Allowance</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="detailsbox">
+                    <h5>Salary Adjustment</h5>
+                    <span>Sophia Elizabeth</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="subtotal">
+                <h4>Total Earnings: <span>HEHEH</span></h4>
+              </div>
+              <hr />
+              <div class="subtotal">
+                <h4>Gross Pay: <span>HEHEH</span></h4>
+              </div>
+              <hr />
+              <div class="b1">
+                <div class="left">
+                  <div class="detailsbox">
+                    <h5>PhilHealth</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>SSS</h5>
+                    <span>VAL001</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="detailsbox">
+                    <h5>HDMF</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                  <div class="detailsbox">
+                    <h5>TAX</h5>
+                    <span>Sophia Elizabeth</span>
+                  </div>
+                </div>
+              </div>
+              <div class="subtotal">
+                <h4>Total: <span>HEHEH</span></h4>
+              </div>
+              <hr />
+              <div class="b1">
+                <div class="left">
+                  <div class="detailsbox">
+                    <h5>Deduction</h5>
+                    <span>2024-05-2</span>
+                  </div>
+                </div>
+                <div class="right"></div>
+              </div>
+              <hr />
+              <div class="subtotal">
+                <h4>Total Deduction: <span>HEHEH</span></h4>
+              </div>
+              <hr />
+              <div class="subtotal">
+                <h4>Net Pay: <span>HEHEH</span></h4>
+              </div>
+            </div>
+          </details> -->
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="src/JS/sweetalert2.min.js"></script>
+    <script src="src/JS/dashboard.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-tab {
+  z-index: 1;
+  position: absolute;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 40px;
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  bottom: 30px;
+}
+.container {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+.content {
+  padding: 0 10px;
+}
+.content .header {
+  color: #eaaa00;
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.header img {
+  align-self: center;
+  position: absolute;
+  right: 0;
+}
+.qrcode .body-content {
+  /* width: 100%; */
+  padding: 16px;
+}
+
+.qrcode .body-content .body-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+}
+.qrcode .body-content canvas {
+  border: 2px solid #eaaa00;
+  padding: 20px;
+  border-radius: 5px;
+  align-self: center;
+}
+/* .qrcode .body-content .qrbox {
+  margin-top: 20%;
+  border: 2px solid #eaaa00;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 300px;
+} */
+
+.request .body-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.request .body-content .inputs {
+  flex: 1;
+}
+.request .body-content .inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.request .body-content form {
+  display: flex;
+  flex-direction: column;
+}
+.request .body-content input {
+  background: #fff;
+  color: #eaaa00;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.request .body-content input:focus {
+  outline-color: #eaaa00;
+}
+.request .body-content select {
+  padding: 10px;
+  background: #fff;
+  color: #eaaa00;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.request .body-content select:focus {
+  outline-color: #eaaa00;
+}
+.request .body-content textarea {
+  padding: 10px;
+  max-width: 430px;
+  background: #fff;
+  color: #eaaa00;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.request .body-content textarea:focus {
+  outline-color: #eaaa00;
+}
+.request button {
+  background-color: #eaaa00;
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.attendance .body-content {
+  /* width: 100%; */
+  padding: 10px;
+  overflow: auto;
+  max-height: 90vh;
+}
+.attendance .attendancebox .time {
+  margin: 10px 0;
+  height: 40px;
+  border-radius: 5px;
+  background: #eaaa00;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.request-history .body-content .requestbox {
+  background: #eaaa00;
+  border-radius: 8px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.rbox1 {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.rbox2 {
+  padding: 0 10px;
+}
+.requestbox .mvalue {
+  font-size: 12px;
+  font-weight: 00;
+}
+.payroll .payrolldetails {
+  max-height: 65vh;
+  overflow: auto;
+}
+.payroll .body-content details {
+  background: #eaaa00;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.payroll .payrolldetails {
+  background: #fff;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.payroll .b1 {
+  display: flex;
+}
+.payroll .left,
+.payroll .right {
+  flex: 1;
+}
+.payroll .detailsbox {
+  margin: 5px;
+}
+.payroll hr {
+  margin: 5px;
+}
+.payroll summary:focus {
+  outline-color: #eaaa00;
+}
+.payroll .msummary {
+  width: 90%;
+  display: inline-block;
+}
+.payroll .msummary .sum1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.payroll .subtotal {
+  margin: 10px;
+  display: flex;
+  padding-right: 10px;
+  justify-content: flex-end;
+}
+.payroll .body-content .detailsbox span {
+  font-size: 12px;
+}
+.payroll .body-content .detailsbox {
+  font-size: 14px;
+}
+.payroll .subtotal {
+  font-size: 13px;
+}
+
+.qrcode {
+  display: block;
+}
+.request {
+  display: none;
+}
+.request-history {
+  display: none;
+}
+.attendance {
+  display: none;
+}
+.payroll {
+  display: none;
+}
+@media only screen and (min-width: 501px) {
+  body {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="src/STYLE/login.css" />
+    <link rel="stylesheet" href="src/STYLE/sweetalert2.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <center><img src="src/img/logo.png" alt="" srcset="" /></center>
+      <center><h5>Login to continue</h5></center>
+
+      <form id="loginfrm">
+        <div class="inputs">
+          <img src="src/icons/username.png" alt="" />
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="inputs">
+          <img src="src/icons/password.png" alt="" />
+          <input
+            type="password"
+            autocomplete="off"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit" id="loginBtn">Login</button>
+        <div class="forgotbox">
+          <span id="forgotmypassword">Forgot Password?</span>
+        </div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="src/JS/sweetalert2.min.js"></script>
+    <script src="src/JS/login.js" type="module"></script>
+  </body>
+</html>
